@@ -6,7 +6,34 @@ namespace Liczby_pierwsze
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            licz(Convert.ToInt32(Console.ReadLine())); 
+        static void licz(int num)
+            {
+                
+               
+                    bool pierwsza = true;
+                    for (int i = 2; i < num; i++)
+                    {
+                        if (num % i == 0)
+                        {
+                            pierwsza = false;
+
+                        }
+                        if (pierwsza)
+                        {
+                            Console.WriteLine("Jest liczbą pierwszą");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Nie jest liczbą pierwszą");
+                            break;
+                        }
+                    }
+                
+            }
         }
+
     }
 }
