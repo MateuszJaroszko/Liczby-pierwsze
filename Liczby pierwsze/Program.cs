@@ -6,10 +6,9 @@ namespace Liczby_pierwsze
     {
         public static void Main(string[] args)
         {
-            int ile = Convert.ToInt32(Console.ReadLine());
-            int p;
+            int ile = Convert.ToInt32(Console.ReadLine()); /*Pobieramy od użytkownika ile chcemy liczb rzeczywistych wypisać na ekranie*/
             int i = 0;
-            int counter = 0; 
+            int counter = 0; /**/
             while(counter <ile) 
             {
                 int wynik = czyPierwsza(i);
@@ -20,18 +19,16 @@ namespace Liczby_pierwsze
                     Console.WriteLine(wynik);
                 }
             }
-            
-             
-
-
-
-        }
+        } 
         public static int czyPierwsza(int num)
         {
-
             bool pierwsza = true;
-            for (int i = 2; i < num; i++)
+            for (int i = 2; i <=num; i++)
             {
+                if (num == 2) 
+                {
+                    return num;
+                }
                 if (num % i == 0)
                 {
                     pierwsza = false;
